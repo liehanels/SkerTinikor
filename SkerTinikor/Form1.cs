@@ -15,16 +15,6 @@ namespace SkerTinikor
         public mainScreen()
         {
             InitializeComponent();
-            for (int i = 0; i < 16; i++)
-            {
-                DataGridViewRow newRow = new DataGridViewRow();
-                newRow.CreateCells(dgvSeats);
-                for (int j = 0; j < 9; j++)
-                {
-                    newRow.Cells[j].Value = "Open";
-                }
-                dgvSeats.Rows.Add(newRow);
-            }
         }
     }
 }
