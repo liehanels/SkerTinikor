@@ -79,14 +79,18 @@ namespace SkerTinikor
             else 
             {
                 MessageBox.Show("Seat is booked by " + s[y,x]);
-                DialogResult unbook = MessageBox.Show("Unbook this seat?", "Confirm Unbooking", MessageBoxButtons.YesNo);
-                if (unbook == DialogResult.Yes)
-                {
-                    unbookSeat(s, x, y);
-                    return false;
-                }
-                else { return true; }
+                return true;
             }
+        }
+        public bool confirmUnbook(string[,] s, int x, int y)
+        {
+            DialogResult unbook = MessageBox.Show("Unbook this seat?", "Confirm Unbooking", MessageBoxButtons.YesNo);
+            if (unbook == DialogResult.Yes)
+            {
+                unbookSeat(s, x, y);
+                return true;
+            }
+            else { return false; }
         }
         public void bookSeat(string[,] s, int x, int y)
         {
@@ -103,7 +107,11 @@ namespace SkerTinikor
                 bookSeat(seats, getX(button1.Text[0]), getY(button1.Text[1]));
                 button1.BackColor = Color.Red;
             }
-            else { button1.BackColor = Color.LightGray; }
+            else if (confirmUnbook(seats, getX(button1.Text[0]), getY(button1.Text[1])))
+            {
+                unbookSeat(seats, getX(button1.Text[0]), getX(button1.Text[1]));
+                button1.BackColor = Color.LightGray;
+            }
         }
     }
 }
