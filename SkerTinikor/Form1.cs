@@ -113,5 +113,47 @@ namespace SkerTinikor
                 button1.BackColor = Color.LightGray;
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (!isSeatBooked(seats, getX(button2.Text[0]), getY(button2.Text[1])))
+            {
+                bookSeat(seats, getX(button2.Text[0]), getY(button2.Text[1]));
+                button2.BackColor = Color.Red;
+            }
+            else if (confirmUnbook(seats, getX(button2.Text[0]), getY(button2.Text[1])))
+            {
+                unbookSeat(seats, getX(button2.Text[0]), getX(button2.Text[1]));
+                button2.BackColor = Color.LightGray;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (!isSeatBooked(seats, getX(button3.Text[0]), getY(button3.Text[1])))
+            {
+                bookSeat(seats, getX(button3.Text[0]), getY(button3.Text[1]));
+                button3.BackColor = Color.Red;
+            }
+            else if (confirmUnbook(seats, getX(button3.Text[0]), getY(button3.Text[1])))
+            {
+                unbookSeat(seats, getX(button3.Text[0]), getX(button3.Text[1]));
+                button3.BackColor = Color.LightGray;
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (!isSeatBooked(seats, getX(button4.Text[0]), getY(button4.Text[1])))
+            {
+                bookSeat(seats, getX(button4.Text[0]), getY(button4.Text[1]));
+                button4.BackColor = Color.Red;
+            }
+            else if (confirmUnbook(seats, getX(button4.Text[0]), getY(button4.Text[1])))
+            {
+                unbookSeat(seats, getX(button4.Text[0]), getX(button4.Text[1]));
+                button4.BackColor = Color.LightGray;
+            }
+        }
     }
 }
