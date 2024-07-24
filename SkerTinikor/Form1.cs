@@ -83,9 +83,9 @@ namespace SkerTinikor
                 if (unbook == DialogResult.Yes)
                 {
                     unbookSeat(s, x, y);
-                    bookSeat(s, x, y);
+                    return false;
                 }
-                return true;
+                else { return true; }
             }
         }
         public void bookSeat(string[,] s, int x, int y)
@@ -101,7 +101,9 @@ namespace SkerTinikor
             if (!isSeatBooked(seats, getX(button1.Text[0]), getY(button1.Text[1])))
             {
                 bookSeat(seats, getX(button1.Text[0]), getY(button1.Text[1]));
+                button1.BackColor = Color.Red;
             }
+            else { button1.BackColor = Color.LightGray; }
         }
     }
 }
