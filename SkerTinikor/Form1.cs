@@ -109,7 +109,7 @@ namespace SkerTinikor
             }
             else if (confirmUnbook(seats, getX(button1.Text[0]), getY(button1.Text[1])))
             {
-                unbookSeat(seats, getX(button1.Text[0]), getX(button1.Text[1]));
+                unbookSeat(seats, getX(button1.Text[0]), getY(button1.Text[1]));
                 button1.BackColor = Color.LightGray;
             }
         }
@@ -123,7 +123,7 @@ namespace SkerTinikor
             }
             else if (confirmUnbook(seats, getX(button2.Text[0]), getY(button2.Text[1])))
             {
-                unbookSeat(seats, getX(button2.Text[0]), getX(button2.Text[1]));
+                unbookSeat(seats, getX(button2.Text[0]), getY(button2.Text[1]));
                 button2.BackColor = Color.LightGray;
             }
         }
@@ -134,11 +134,15 @@ namespace SkerTinikor
             {
                 bookSeat(seats, getX(button3.Text[0]), getY(button3.Text[1]));
                 button3.BackColor = Color.Red;
+                button4.PerformClick();
+                button4.Enabled = false;
             }
             else if (confirmUnbook(seats, getX(button3.Text[0]), getY(button3.Text[1])))
             {
-                unbookSeat(seats, getX(button3.Text[0]), getX(button3.Text[1]));
+                unbookSeat(seats, getX(button3.Text[0]), getY(button3.Text[1]));
                 button3.BackColor = Color.LightGray;
+                button4.Enabled = true;
+                button4.PerformClick();
             }
         }
 
@@ -151,8 +155,212 @@ namespace SkerTinikor
             }
             else if (confirmUnbook(seats, getX(button4.Text[0]), getY(button4.Text[1])))
             {
-                unbookSeat(seats, getX(button4.Text[0]), getX(button4.Text[1]));
+                unbookSeat(seats, getX(button4.Text[0]), getY(button4.Text[1]));
                 button4.BackColor = Color.LightGray;
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if(!isSeatBooked(seats, getX(button5.Text[0]), getY(button5.Text[1])))
+            {
+                bookSeat(seats, getX(button5.Text[0]),getY(button5.Text[1]));
+                button5.BackColor = Color.Red;
+            }
+            else if (confirmUnbook(seats, getX(button5.Text[0]), getY(button5.Text[1])))
+            {
+                unbookSeat(seats, getX(button5.Text[0]),getY(button5.Text[1]));
+                button5.BackColor = Color.LightGray;
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (!isSeatBooked(seats, getX(button6.Text[0]), getY(button6.Text[1])))
+            {
+                bookSeat(seats, getX(button6.Text[0]), getY(button6.Text[1]));
+                button6.BackColor = Color.Red;
+            }
+            else if (confirmUnbook(seats, getX(button6.Text[0]), getY(button6.Text[1])))
+            {
+                unbookSeat(seats, getX(button6.Text[0]), getY(button6.Text[1]));
+                button6.BackColor = Color.LightGray;
+            }
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            if (!isSeatBooked(seats, getX(button21.Text[0]), getY(button21.Text[1])))
+            {
+                bookSeat(seats, getX(button21.Text[0]), getY(button21.Text[1]));
+                button21.BackColor = Color.Red;
+            }
+            else if (confirmUnbook(seats, getX(button21.Text[0]), getY(button21.Text[1])))
+            {
+                unbookSeat(seats, getX(button21.Text[0]), getY(button21.Text[1]));
+                button21.BackColor = Color.LightGray;
+            }
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            if (!isSeatBooked(seats, getX(button22.Text[0]), getY(button22.Text[1])))
+            {
+                bookSeat(seats, getX(button22.Text[0]), getY(button22.Text[1]));
+                button22.BackColor = Color.Red;
+            }
+            else if (confirmUnbook(seats, getX(button22.Text[0]), getY(button22.Text[1])))
+            {
+                unbookSeat(seats, getX(button22.Text[0]), getY(button22.Text[1]));
+                button22.BackColor = Color.LightGray;
+            }
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            if (!isSeatBooked(seats, getX(button23.Text[0]), getY(button23.Text[1])))
+            {
+                bookSeat(seats, getX(button23.Text[0]), getY(button23.Text[1]));
+                button23.BackColor = Color.Red;
+                button24.PerformClick();
+                button24.Enabled = false;
+            }
+            else if (confirmUnbook(seats, getX(button23.Text[0]), getY(button23.Text[1])))
+            {
+                unbookSeat(seats, getX(button23.Text[0]), getY(button23.Text[1]));
+                button23.BackColor = Color.LightGray;
+                button24.Enabled = true;
+                button24.PerformClick();
+            }
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            if (!isSeatBooked(seats, getX(button24.Text[0]), getY(button24.Text[1])))
+            {
+                bookSeat(seats, getX(button24.Text[0]), getY(button24.Text[1]));
+                button24.BackColor = Color.Red;
+            }
+            else if (confirmUnbook(seats, getX(button24.Text[0]), getY(button24.Text[1])))
+            {
+                unbookSeat(seats, getX(button24.Text[0]), getY(button24.Text[1]));
+                button24.BackColor = Color.LightGray;
+            }
+        }
+
+        private void button25_Click(object sender, EventArgs e)
+        {
+            if (!isSeatBooked(seats, getX(button25.Text[0]), getY(button25.Text[1])))
+            {
+                bookSeat(seats, getX(button25.Text[0]), getY(button25.Text[1]));
+                button25.BackColor = Color.Red;
+            }
+            else if (confirmUnbook(seats, getX(button25.Text[0]), getY(button25.Text[1])))
+            {
+                unbookSeat(seats, getX(button25.Text[0]), getY(button25.Text[1]));
+                button25.BackColor = Color.LightGray;
+            }
+        }
+
+        private void button26_Click(object sender, EventArgs e)
+        {
+            if (!isSeatBooked(seats, getX(button26.Text[0]), getY(button26.Text[1])))
+            {
+                bookSeat(seats, getX(button26.Text[0]), getY(button26.Text[1]));
+                button26.BackColor = Color.Red;
+            }
+            else if (confirmUnbook(seats, getX(button26.Text[0]), getY(button26.Text[1])))
+            {
+                unbookSeat(seats, getX(button26.Text[0]), getY(button26.Text[1]));
+                button26.BackColor = Color.LightGray;
+            }
+        }
+
+        private void button41_Click(object sender, EventArgs e)
+        {
+            if (!isSeatBooked(seats, getX(button41.Text[0]), getY(button41.Text[1])))
+            {
+                bookSeat(seats, getX(button41.Text[0]), getY(button41.Text[1]));
+                button41.BackColor = Color.Red;
+            }
+            else if (confirmUnbook(seats, getX(button41.Text[0]), getY(button41.Text[1])))
+            {
+                unbookSeat(seats, getX(button41.Text[0]), getY(button41.Text[1]));
+                button41.BackColor = Color.LightGray;
+            }
+        }
+
+        private void button42_Click(object sender, EventArgs e)
+        {
+            if (!isSeatBooked(seats, getX(button42.Text[0]), getY(button42.Text[1])))
+            {
+                bookSeat(seats, getX(button42.Text[0]), getY(button42.Text[1]));
+                button42.BackColor = Color.Red;
+            }
+            else if (confirmUnbook(seats, getX(button42.Text[0]), getY(button42.Text[1])))
+            {
+                unbookSeat(seats, getX(button42.Text[0]), getY(button42.Text[1]));
+                button42.BackColor = Color.LightGray;
+            }
+        }
+
+        private void button43_Click(object sender, EventArgs e)
+        {
+            if (!isSeatBooked(seats, getX(button43.Text[0]), getY(button43.Text[1])))
+            {
+                bookSeat(seats, getX(button43.Text[0]), getY(button43.Text[1]));
+                button43.BackColor = Color.Red;
+                button44.PerformClick();
+                button44.Enabled = false;
+            }
+            else if (confirmUnbook(seats, getX(button43.Text[0]), getY(button43.Text[1])))
+            {
+                unbookSeat(seats, getX(button43.Text[0]), getY(button43.Text[1]));
+                button43.BackColor = Color.LightGray;
+                button44.Enabled = true;
+                button44.PerformClick();
+            }
+        }
+
+        private void button44_Click(object sender, EventArgs e)
+        {
+            if (!isSeatBooked(seats, getX(button44.Text[0]), getY(button44.Text[1])))
+            {
+                bookSeat(seats, getX(button44.Text[0]), getY(button44.Text[1]));
+                button44.BackColor = Color.Red;
+            }
+            else if (confirmUnbook(seats, getX(button44.Text[0]), getY(button44.Text[1])))
+            {
+                unbookSeat(seats, getX(button44.Text[0]), getY(button44.Text[1]));
+                button44.BackColor = Color.LightGray;
+            }
+        }
+
+        private void button45_Click(object sender, EventArgs e)
+        {
+            if (!isSeatBooked(seats, getX(button45.Text[0]), getY(button45.Text[1])))
+            {
+                bookSeat(seats, getX(button45.Text[0]), getY(button45.Text[1]));
+                button45.BackColor = Color.Red;
+            }
+            else if (confirmUnbook(seats, getX(button45.Text[0]), getY(button45.Text[1])))
+            {
+                unbookSeat(seats, getX(button45.Text[0]), getY(button45.Text[1]));
+                button45.BackColor = Color.LightGray;
+            }
+        }
+
+        private void button46_Click(object sender, EventArgs e)
+        {
+            if (!isSeatBooked(seats, getX(button46.Text[0]), getY(button46.Text[1])))
+            {
+                bookSeat(seats, getX(button46.Text[0]), getY(button46.Text[1]));
+                button46.BackColor = Color.Red;
+            }
+            else if (confirmUnbook(seats, getX(button46.Text[0]), getY(button46.Text[1])))
+            {
+                unbookSeat(seats, getX(button46.Text[0]), getY(button46.Text[1]));
+                button46.BackColor = Color.LightGray;
             }
         }
     }
